@@ -1,0 +1,30 @@
+﻿{
+    propertyEditors: [    
+		{ 
+			alias: "vp.VimeoPicker",
+			name:  "Vimeo Picker",
+			editor: {
+				view: "~/App_Plugins/Vimeo_Picker/vimeopicker.html",
+				valueType: "STRING"
+			}, 
+			prevalues: {
+				fields: [	
+                    {					
+						label: "Username",
+						description: "Please enter your Vimeo username",
+						key: "userName",
+						view: "textstring",
+						validation: [
+			 				{
+								type: "Required"         
+							}   
+						]
+					}
+				]
+			}
+        }
+    ],
+    javascript: [
+		'~/App_Plugins/Vimeo_Picker/vimeopicker.controller.js'
+    ]
+} 

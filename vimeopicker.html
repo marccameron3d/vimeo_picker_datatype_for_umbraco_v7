@@ -1,0 +1,16 @@
+<div ng-controller="vp.VimeoPickerCtrl" ng-init="init()" ng-model="videoId" class="umb-editor umb-contentpicker">
+    <div class="unstyled list-icons" ng-if="!showAdd()">
+        <img ng-src="{{video.thumbnail_small}}" />
+        {{video.title}}
+        <p><a href="#" prevent-default ng-click="remove()">Delete</a></p>
+    </div>
+
+    <ul class="unstyled list-icons" ng-if="showAdd()">
+        <li>
+            <i class="icon icon-add blue"></i>
+            <a href="#" ng-click="openVimeoPicker()" prevent-default>
+                <localize key="general_add">Add</localize>
+            </a>
+        </li>
+    </ul>
+</div>

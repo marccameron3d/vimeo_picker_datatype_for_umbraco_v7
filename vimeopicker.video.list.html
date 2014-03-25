@@ -1,0 +1,30 @@
+<div class="umb-panel" ng-controller="vp.VimeoPickerDialogCtrl" ng-init="init()">
+    <div class="umb-panel-header">
+        <h2>Videos</h2>
+    </div>
+    <div class="umb-panel-body with-footer">
+        <div class="radio">
+            <label ng-repeat="video in videos">
+                <input ng-model="$parent.videoId" value="{{video.id}}" type="radio" name="video">
+                {{video.title}}
+                <small>{{video.description}}</small>
+            </label>
+        </div>
+    </div>
+    
+    
+
+    <div class="umb-panel-footer">
+        <div class="umb-el-wrap umb-panel-buttons ng-binding">
+
+            <div class="btn-toolbar umb-btn-toolbar pull-right">
+
+                <a class="btn btn-link" href="#" ng-click="close()" prevent-default><localize key="general_cancel">Cancel</localize></a>
+                <button class="btn btn-primary" ng-click="select()">
+                    <localize key="buttons_select">Select</localize>
+                </button>
+
+            </div>
+        </div>
+    </div>
+</div>
