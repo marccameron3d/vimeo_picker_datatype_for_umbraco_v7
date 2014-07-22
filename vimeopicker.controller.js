@@ -26,6 +26,7 @@ angular.module("umbraco")
             function getVideo(id) {
                 if (typeof id == 'undefined') {
                     $scope.videoId = $scope.model.value.videoId = '';
+					return;
                 };
 
                 var url = 'http://vimeo.com/api/v2/video/' + id + '.json';
