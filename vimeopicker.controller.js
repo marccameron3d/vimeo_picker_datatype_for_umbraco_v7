@@ -29,7 +29,7 @@ angular.module("umbraco")
 					return;
                 };
 
-                var url = 'http://vimeo.com/api/v2/video/' + id + '.json';
+                var url = 'https://vimeo.com/api/v2/video/' + id + '.json/';
 
                 $http({ method: 'GET', url: url })
                     .success(function(data) {
@@ -64,7 +64,7 @@ angular.module("umbraco")
             
             $scope.init = function () {
                 $scope.videoId = '';
-                var url = 'http://vimeo.com/api/v2/' + vimeoConfig.vimeoUserName + '/videos.json';
+                var url = 'https://vimeo.com/api/v2/' + vimeoConfig.vimeoUserName + '/videos.json/';
                 $http({ method: 'GET', url: url })
                     .success(function (data) {
                         $scope.videos = data;
